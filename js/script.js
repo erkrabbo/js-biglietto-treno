@@ -6,12 +6,14 @@ function calcolaPrezzo(e){
     const kmPrice= .21;
     const youngDiscount= .2;
     const oldDiscount= .4;
+
     let discount;
     
-    let km = document.myForm.km.value;
-        console.log(km);
     let age = document.myForm.age.value;
         console.log(age);
+
+    let km = document.myForm.km.value;
+        console.log(km);
     
     let ticketCost = km * kmPrice;
     let ticket = document.getElementById("ticket");
@@ -39,6 +41,8 @@ function calcolaPrezzo(e){
             `Il prezzo finale del biglietto è €${ticketCost.toFixed(2)}.`;
     }
     
-    console.log(ticketCost)
+    console.log(discount * 100 + "%")
+    console.log(ticketCost);
+    
     e.preventDefault();
 }
