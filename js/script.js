@@ -1,5 +1,8 @@
 let myForm = document.forms.myForm;
-myForm.addEventListener("submit", function (calcolaPrezzo) {
+
+myForm.addEventListener("submit", calcolaPrezzo);
+
+function calcolaPrezzo(e){
     const kmPrice= .21;
     const youngDiscount= .2;
     const oldDiscount= .4;
@@ -37,5 +40,5 @@ myForm.addEventListener("submit", function (calcolaPrezzo) {
     }
     
     console.log(ticketCost)
-    calcolaPrezzo.preventDefault();
-})
+    e.preventDefault();
+}
