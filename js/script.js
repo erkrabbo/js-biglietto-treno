@@ -21,7 +21,8 @@ function calcolaPrezzo(e){
     if(age < 0){
         ticket.innerHTML=
             `Non sapevo avessero inventato il viaggio nel tempo!`;
-    }else if (0<= age < 18){
+
+    }else if (age < 18){
         discount= youngDiscount;
         ticketCost = ticketCost - (ticketCost * discount);
     
