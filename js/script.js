@@ -18,8 +18,10 @@ function calcolaPrezzo(e){
     let ticketCost = km * kmPrice;
     let ticket = document.getElementById("ticket");
     
-    
-    if (age < 18){
+    if(age < 0){
+        ticket.innerHTML=
+            `Non sapevo avessero inventato il viaggio nel tempo!`;
+    }else if (0<= age < 18){
         discount= youngDiscount;
         ticketCost = ticketCost - (ticketCost * discount);
     
@@ -43,6 +45,6 @@ function calcolaPrezzo(e){
     
     console.log(discount * 100 + "%")
     console.log(ticketCost);
-    
+
     e.preventDefault();
 }
